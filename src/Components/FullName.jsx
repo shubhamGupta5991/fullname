@@ -1,25 +1,34 @@
 import React, { useState } from 'react'
 
-const FullName = () => {
+const FullfullName = () => {
     const [firstName,setFirstName] = useState('')
     const [lastName,setLastName] = useState('')
+    const [isVisible,setIsVisible] = useState(false)
+    const handleSubmit = (e)=>{
+        e.preventDefault();
+    }
+    
+    
+   
+  
+    
   return (
     <div>
-        <h1>Full Name Display</h1>
-        <form action="">
+        <h1>Full fullName Display</h1>
+        <form onSubmit={handleSubmit} >
           <div>
-          <label htmlFor="name">First Name:</label>
-            <input type="text" required value={firstName}/>
+          <label htmlFor="firstfullName">First Name:</label>
+            <input type="text" name='firstfullName' required value={firstName}   onChange={(e)=>setFirstName(e.target.value)} />
           </div>
           <div>
-          <label htmlFor="name">Last Name:</label>
-            <input type="text" required value={lastName}/>
+          <label htmlFor="lastfullName">Last Name:</label>
+            <input type="text" name='lastfullName' required value={lastName} onChange={(e)=>setLastName(e.target.value)} />
           </div>
-          <button>Submit</button>
+          <button type='sumbit' onClick={()=>setIsVisible(true)}>Submit</button>
         </form>
-        <p></p>
+        {isVisible?(<p>{`Full Name: ${firstName} ${lastName} `}</p>):('')}
     </div>
   )
 }
 
-export default FullName
+export default FullfullName
