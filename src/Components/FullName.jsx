@@ -24,7 +24,7 @@ const FullfullName = () => {
           <label htmlFor="lastfullName">Last Name:</label>
             <input type="text" name='lastfullName' required value={lastName} onChange={(e)=>setLastName(e.target.value)} />
           </div>
-          <button type='sumbit' onClick={()=>(firstName && lastName )?setIsVisible(true):''}>Submit</button>
+          <button type='submit' onClick={()=>(firstName && lastName )?setIsVisible(true):''}>Submit</button>
         {isVisible?(<p>{`Full Name: ${firstName} ${lastName} `}</p>):('')}
         </form>
     </div>
