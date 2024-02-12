@@ -25,8 +25,8 @@ const FullfullName = () => {
             <input type="text" name='lastfullName' required value={lastName} onChange={(e)=>setLastName(e.target.value)} />
           </div>
           <button type='sumbit' onClick={()=>(firstName && lastName )?setIsVisible(true):''}>Submit</button>
-        </form>
         {isVisible?(<p>{`Full Name: ${firstName} ${lastName} `}</p>):('')}
+        </form>
     </div>
   )
 }
