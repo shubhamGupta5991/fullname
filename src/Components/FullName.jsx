@@ -26,7 +26,8 @@ const FullfullName = () => {
           </div>
           <button type='submit' onClick={()=>(firstName && lastName )?setIsVisible(true):''}>Submit</button>
         </form>
-        {isVisible?(<p>{`Full Name: ${firstName} ${lastName} `}</p>):('')}
+        {/* {isVisible?(<p>{`Full Name: ${firstName} ${lastName} `}</p>):('')} */}
+        <p>{isVisible?`Full Name: ${firstName} ${lastName}`:''}</p>
     </div>
   )
 }
